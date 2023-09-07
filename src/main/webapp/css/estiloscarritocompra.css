@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Cherry+Bomb+One&family=Luckiest+Guy&family=Permanent+Marker&family=Righteous&family=Rubik+Puddles&display=swap');
+.gifcontitulo{
+		display:flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom:11px;
+}
+.gifcontitulo>img{
+	width:50px;
+}
+
+.gifcontitulo>h1{
+font-family: 'Permanent Marker', cursive;
+  color:#FF5733;
+}
+.card-title{
+	font-family: 'ABeeZee', sans-serif;
+	
+}
+.imagen >img{
+	border-radius: 10px;
+}
+
+@keyframes card-flash {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+.card {
+   animation: card-flash 1s;
+}
+
+.card {
+   transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+   transform: scale(1.1);
+} 
+ 
+.datos h2{
+	font-family: 'Luckiest Guy', cursive;
+
+}
+   
+.aside{
+	margin-top:78px;
+	margin-left:40px;
+	padding:10px;
+	width:110%;
+	text-align: center;
+	display:flex;
+	justify-content: center;
+	align-items: center;	
+}
+.aside h3{
+	font-family: 'Righteous', cursive;
+	
+}
+.imagen2{
+
+	margin-bottom:10px;
+	width:300px;
+	height:350px;
+
+}
+.rojo{
+	color:red;
+}
+
+
+
+

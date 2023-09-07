@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&family=Courgette&family=Edu+NSW+ACT+Foundation&family=Island+Moments&family=Jaldi&family=Lobster&family=Montserrat:ital,wght@0,400;1,700&family=Pangolin&family=Permanent+Marker&family=Poppins:wght@300&family=Shadows+Into+Light+Two&family=Sofia&family=Tsukimi+Rounded:wght@700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+
+
+
+#reviews-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+.gifcontitulo{
+	display:flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.gifcontitulo img{
+	width:50px;
+}
+body h2{
+	margin-top:20px;
+	text-align:right;
+	margin-right:70px;
+  font-family: 'Tsukimi Rounded', sans-serif;
+
+	 color:#FF5733;
+}
+.orange-hr {
+  border: none;
+  width:90%;
+  height: 2px;
+  background-color: #FF5733;
+  margin-top:20px;
+}
+.review {
+	background-color: #ffffff;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin:0px 20px;
+	width:80%;
+	position: relative;
+  	
+  transition: transform 0.5s;
+}
+.review:hover {
+  transform: translateY(-30px); 
+}
+.review-image {
+  display: block;
+  margin: 0 auto; 
+  width:170px;
+  height: 170px; 
+  object-fit: cover;
+  animation: myAnim3 1s ease 0s 1 normal forwards;
+	
+}
+
+.rating {
+	font-size: 24px;
+	color: #f1c40f;
+	margin-bottom: 10px;
+}
+
+.name {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.date {
+	color: #999;
+	margin-bottom: 10px;
+}
+
+.comment {
+	font-style: italic;
+	color: #555;
+}
+@keyframes myAnim3 {
+	0% {
+		opacity: 0;
+		transform: rotate(-540deg) scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotate(0) scale(1);
+	}
+}
+
+
+

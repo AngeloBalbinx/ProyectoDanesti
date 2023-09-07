@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Cherry+Bomb+One&family=Permanent+Marker&family=Rubik+Puddles&display=swap');
+
+.img-reluciente {
+	animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	93% {
+		animation-timing-function: ease-in;
+		transform: translateY(-4px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+.botonpe{
+	animation: myAnim2 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim2 {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+label{
+	font-family: 'Cherry Bomb One', cursive;
+	 color:#FF5733;
+}
+.gifcontitulo{
+	display:flex;
+	justify-content: initial;
+	align-items: center;
+}
+.gifcontitulo img{
+	width:50px;
+	
+}
+.titulo{
+	font-family: 'Permanent Marker', cursive;
+	text-decoration: underline;
+	margin-top:10px;
+	 color:#FF5733;
+}
+
+

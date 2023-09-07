@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&family=Courgette&family=Edu+NSW+ACT+Foundation&family=Island+Moments&family=Jaldi&family=Lobster&family=Montserrat:ital,wght@0,400;1,700&family=Pangolin&family=Permanent+Marker&family=Poppins:wght@300&family=Shadows+Into+Light+Two&family=Sofia&family=Tsukimi+Rounded:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Cherry+Bomb+One&family=Permanent+Marker&family=Rubik+Puddles&display=swap');
+.gifcontitulo{
+	display:flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.gifcontitulo img{
+	width:50px;
+}
+
+body h2{
+  margin-top:20px;
+  text-align:right;
+  margin-right:70px;
+  font-family: 'Tsukimi Rounded', sans-serif;
+  color:#FF5733;
+}
+.orange-hr {
+  border: none;
+  width:90%;
+  height: 2px;
+  background-color: #FF5733;
+  margin-top:20px;
+}
+
+.container {
+   margin-top: 20px;
+    }
+.row {
+  margin-bottom: 20px;
+  margin-top: 20px;
+    }
+.col-sm-4 {
+   width: 33.33%;
+   padding: 10px;
+   box-sizing: border-box;
+    }
+.titulo {
+   text-align: center;
+   color:#FF5733;
+   letter-spacing:2px;
+   padding: 10px;
+   font-family: 'Permanent Marker', cursive;
+    }
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-body img {
+   width: 200px;
+   height: 180px;
+   border-radius: 5px;
+   margin-bottom: 10px;
+   animation: myAnim4 1s ease 0s 1 normal forwards;
+   
+}
+    
+.price {
+  position: absolute;
+  bottom: 200;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  margin-bottom:10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'ABeeZee', sans-serif;
+    color:#FF5733;
+}
+    
+.descripcion{
+  text-align: center;
+  margin-top: 10px;
+  min-height: 150px;
+  padding:20px;
+  font-family: 'ABeeZee', sans-serif;
+    color:#FF5733;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+@keyframes myAnim4{
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+    
+   

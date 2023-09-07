@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&family=Edu+NSW+ACT+Foundation&family=Island+Moments&family=Montserrat:ital,wght@0,400;1,700&family=Poppins:wght@300&family=Sofia&display=swap');
+
+
+footer {
+  background: linear-gradient(to right, #00ff00, #008000);
+  color: #212529;
+  padding: 5px 0;
+  font-size: 14px;
+  margin-top:10px;
+ 
+}
+
+footer h3 {
+  font-size: 16px;
+  font-family: 'Pangolin', cursive;
+  margin-bottom: 20px;
+}
+
+footer hr {
+  border: 0;
+  border-top: 1px solid #d3d3d3;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+footer p {
+  margin-bottom: 5px;
+  margin-top:10px;
+  font-family: 'Pangolin', cursive;
+}
+
+footer .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  
+}
+
+footer .social-icons {
+  margin-top: 20px;
+}
+footer .social-icons h3 {
+  margin-top: -21px;
+}
+footer .social-icons a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  margin-right: 10px;
+  background-color: #04883b;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .social-icons a:hover {
+  transform: translateY(-10px);
+  background-color: #04883b;
+  color: #212529;
+}
+
+@media (max-width: 767px) {
+  footer .col-md-4 {
+    margin-bottom: 30px;
+  }
+}
+@keyframes vibracion {
+    0% { transform: translate(0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0); }
+  }
+
+  .vibrar:hover {
+    animation: vibracion 0.4s ease-in-out infinite;
+  }
+
+
+  

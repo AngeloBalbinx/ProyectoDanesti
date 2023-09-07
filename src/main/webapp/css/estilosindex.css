@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&family=Edu+NSW+ACT+Foundation&family=Island+Moments&family=Montserrat:ital,wght@0,400;1,700&family=Pangolin&family=Poppins:wght@300&family=Shadows+Into+Light+Two&family=Sofia&display=swap');
+
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom:10px;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #00ff00, #008000);
+  
+ 
+}
+
+.slides img {
+	
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.next {
+  margin-left: 10px;
+}
+ .cont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  
+.card {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      margin:15px;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+    }
+
+    .card-content {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align:center;
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+
+    .card-text {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      font-family: 'Jaldi', sans-serif;
+    }
