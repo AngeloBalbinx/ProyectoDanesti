@@ -566,7 +566,7 @@ public class ControladorVistas extends HttpServlet {
 				v.setNumbol(numbol);
 				v.setFechabol(v.getFechabol());
 			    int ok1=gv.guardarCabBol(v);
-
+			    boolean flagError = false;
 				//Guardar detbol
 			    for (Venta element : lista) {
 			    	Venta detalleVenta= new Venta();
@@ -580,20 +580,20 @@ public class ControladorVistas extends HttpServlet {
 
 			    	System.out.println("Tamaño de la lista: " + lista.size());
 
-			    	if(ok1==0 && ok2==0) {
-						request.setAttribute("mensaje", "<script>swal('Mensaje','Inténtelo de nuevo','error');</script>");
-						request.getRequestDispatcher("registrarventa.jsp").forward(request, response);
-						request.setAttribute("lista", lista);
-						request.setAttribute("totalPagar", totalPagar);
-
-					}else {
-						request.setAttribute("mensaje", "<script>swal('Mensaje','Venta realizada exitosamente','success');</script>");
-						request.getRequestDispatcher("registrarventa.jsp").forward(request, response);
-						request.setAttribute("lista", lista);
-						request.setAttribute("totalPagar", totalPagar);
-					}
+			    	if (ok1 == 0 && ok2 == 0) {
+			            flagError = true;
+			            break;  // salir del bucle si hay un error
+			        }
 			    }
-			    		//Actualizaciòn del stock
+			    if (flagError) {
+			        request.setAttribute("mensaje", "<script>swal('Mensaje','Inténtelo de nuevo','error');</script>");
+			    } else {
+			        request.setAttribute("mensaje", "<script>swal('Mensaje','Venta realizada exitosamente','success');</script>");
+			    }
+			    request.getRequestDispatcher("registrarventa.jsp").forward(request, response);
+			    request.setAttribute("lista", lista);
+			    request.setAttribute("totalPagar", totalPagar);
+			    //Actualizaciòn del stock
 				for (Venta element : lista) {
 
 				Producto pr = new Producto();
@@ -604,11 +604,11 @@ public class ControladorVistas extends HttpServlet {
 				pr =gp.buscarP(codprod);
 				int sac= pr.getStock()-cantidad;
 				gp.actualizarStock(codprod, sac);
+				
 
+				}
 
-}
-
-				break;
+				
 			case "Eliminar":
 
 				int index=-1;
