@@ -26,23 +26,23 @@
 <form action="controlador?menu=Usuario" method="post">
 <div class="form-group">
 	<label>Nombre</label>
-	<input type="text" name="txtNombre" value="${u.getNombre() }"class="form-control"/>
+	<input type="text" name="txtNombre" value="${usu.getNombre() }"class="form-control"/>
 </div>
 <div class="form-group">
 	<label>Apellido</label>
-	<input type="text" name="txtApellido"value="${u.getApellido() }" class="form-control"/>
+	<input type="text" name="txtApellido"value="${usu.getApellido() }" class="form-control"/>
 </div>
 <div class="form-group">
 	<label>Usuario</label>
-	<input type="text" name="txtUsuario"value="${u.getUsuario() }" class="form-control"/>
+	<input type="text" name="txtUsuario"value="${usu.getUsuario() }" class="form-control"/>
 </div>
 <div class="form-group">
 	<label>Clave</label>
-	<input type="password" name="txtClave" value="${u.getClave() }"class="form-control"/>
+	<input type="password" name="txtClave" value="${usu.getClave() }"class="form-control"/>
 </div>
 <div class="form-group">
 	<label>F.Nacimiento</label>
-	<input type="date" name="txtFnac" value="${u.getFnacim() }"class="form-control"/>
+	<input type="date" name="txtFnac" value="${usu.getFnacim() }"class="form-control"/>
 </div>
 <div class="form-group">
 	<label for="inputState">Tipo :</label> <select id="inputState"
@@ -55,10 +55,10 @@
 	request.setAttribute("lstTipos", lstTipos);
 	%>
 	<c:forEach items="${lstTipos }" var="c">
-	<c:if test="${c.getIdtipo() == u.idtipo}">
+	<c:if test="${c.getIdtipo() == usu.idtipo}">
 	<option value="${c.getIdtipo()}" selected="selected">${c.getDescripcion() }</option>
 	</c:if>
-	<c:if test="${c.getIdtipo() != u.idtipo}">
+	<c:if test="${c.getIdtipo() != usu.idtipo}">
 	<option value="${c.getIdtipo() }">${c.getDescripcion() }</option>
 	</c:if>
 	</c:forEach>
