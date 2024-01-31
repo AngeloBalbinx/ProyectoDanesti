@@ -192,13 +192,13 @@ public class ControladorVistas extends HttpServlet {
 				String fnac = request.getParameter("txtFnac");
 				int tipo= Integer.parseInt(request.getParameter("cboTipo"));
 
-				Usuario u = new Usuario();
-				u.setNombre(nombre);
-				u.setApellido(ape);
-				u.setUsuario(usr);
-				u.setClave(clave);
-				u.setFnacim(fnac);
-				u.setIdtipo(tipo);
+				Usuario usu = new Usuario();
+				usu.setNombre(nombre);
+				usu.setApellido(ape);
+				usu.setUsuario(usr);
+				usu.setClave(clave);
+				usu.setFnacim(fnac);
+				usu.setIdtipo(tipo);
 
 
 				int ok = gu.registrar(u);
@@ -206,18 +206,18 @@ public class ControladorVistas extends HttpServlet {
 				if (ok == 0) {
 					request.setAttribute("mensaje",
 							"<div class ='alert alert-danger' role='alert'>"
-							+ "Error al registrar usuario " + u.getCodigo() + " !</div>");
+							+ "Error al registrar usuario " + usu.getCodigo() + " !</div>");
 				}else {
 					request.setAttribute("mensaje",
 							"<div class ='alert alert-success' role='alert'>"
-							+ "Usuario " + u.getNombre() + " Registrado!</div>");
+							+ "Usuario " + usu.getNombre() + " Registrado!</div>");
 				}
 				request.getRequestDispatcher("controlador?menu=Usuario&accion=Listar").forward(request, response);
 				break;
 			case "Editar":
 				cod = Integer.parseInt(request.getParameter("cod"));
-				u = gu.listarCodigo(cod);
-				request.setAttribute("u", u);
+				usu = gu.listarCodigo(cod);
+				request.setAttribute("usu", usu);
 				request.getRequestDispatcher("controlador?menu=Usuario&accion=Listar").forward(request, response);
 				break;
 
@@ -483,10 +483,10 @@ public class ControladorVistas extends HttpServlet {
 			        outputStream.close();
 			    } catch (DocumentException e) {
 			        e.printStackTrace();
-			        // Manejar el error apropiadamente
+			        
 			    } catch (IOException e) {
 			        e.printStackTrace();
-			        // Manejar el error apropiadamente
+			        
 			    }
 			    break;
 			}
@@ -531,7 +531,7 @@ public class ControladorVistas extends HttpServlet {
 			        ultimoItem = lista.get(lista.size() - 1).getItem();
 			    }
 
-			    codprod = request.getParameter("codigoproducto"); // Obtener el valor del parámetro directamente
+			    codprod = request.getParameter("codigoproducto"); 
 			    System.out.println("codprod: " + codprod);
 			    desc = request.getParameter("nombreproducto");
 			    precio = Double.parseDouble(request.getParameter("precio"));
@@ -582,7 +582,7 @@ public class ControladorVistas extends HttpServlet {
 
 			    	if (ok1 == 0 && ok2 == 0) {
 			            flagError = true;
-			            break;  // salir del bucle si hay un error
+			            break;  
 			        }
 			    }
 			    if (flagError) {
@@ -616,8 +616,8 @@ public class ControladorVistas extends HttpServlet {
 				    Venta venta = lista.get(i);
 				    if (venta.getCodprod().equals(codprod)) {
 				    	System.out.println("codprod: " + codprod);
-				        index = i; // Encontrado, asignar el índice
-				        break; // Salir del bucle
+				        index = i; 
+				        break; 
 				    }
 				}
 
@@ -627,7 +627,7 @@ public class ControladorVistas extends HttpServlet {
 
 			  	  for (int i = index; i < lista.size(); i++) {
 				        Venta venta = lista.get(i);
-				        venta.setItem(venta.getItem() - 1); // Disminuir en 1 el número del producto
+				        venta.setItem(venta.getItem() - 1); 
 
 				    }
 

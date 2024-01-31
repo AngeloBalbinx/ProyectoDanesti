@@ -57,7 +57,7 @@
     		<input type="hidden" name="accion" value="exportarUsu">
    			<button class="btn btn-outline-success" type="submit">Exportar usuarios en pdf</button>
 		</form>
-		
+		</div> 
 		<hr name="separador de reportes">
 
 		<div class="px-4 text-center">

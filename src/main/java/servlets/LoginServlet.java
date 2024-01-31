@@ -39,7 +39,6 @@ public class LoginServlet extends HttpServlet {
 		if (u!=null) {
 
 			System.out.println("Id de la session:" + request.getSession().getId());
-
 			request.getSession().setAttribute("u", u); // envia el atributo a nivel de session
 			request.setAttribute("mensaje", "<script>swal('Mensaje','Bienvenido','success');</script>");
 			request.getRequestDispatcher("index.jsp").forward(request, response);
