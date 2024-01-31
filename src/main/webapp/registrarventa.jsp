@@ -30,12 +30,12 @@
 </div>
 <div class="form-group d-flex">
 <div class="col-sm-6 d-flex" >
-<input type="text" name="codigocliente" value="${u.getCodigo()}"class="form-control" placeholder="Código"/>
+<input type="text" name="codigocliente" value="${usu.getCodigo()}"class="form-control" placeholder="Código"/>
 <input type="submit" name="accion"value="BuscarCliente" class="btn btn-outline-dark"/>
 </div>
 
 <div class="col-sm-6">
-<input type="text" name="nombrecliente" readonly="readonly" value="${u.getNombre()} ${u.getApellido()}" placeholder="Datos Cliente"class="form-control"/>
+<input type="text" name="nombrecliente" readonly="readonly" value="${usu.getNombre()} ${usu.getApellido()}" placeholder="Datos Cliente"class="form-control"/>
 </div>
 
 </div>

@@ -42,6 +42,7 @@ import models.Venta;
 public class ControladorVistas extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        Usuario u = new Usuario();
+       Usuario usu = new Usuario();
        GestionUsuarioMySQL gu = new GestionUsuarioMySQL();
        GestionProductoMySQL gp = new GestionProductoMySQL();
        Producto p = new Producto();
@@ -501,11 +502,11 @@ public class ControladorVistas extends HttpServlet {
 			case "BuscarCliente":
 				int codigo = Integer.parseInt(request.getParameter("codigocliente"));
 
-				u.setCodigo(codigo);
+				usu.setCodigo(codigo);
 				DAOFactory fabrica = DAOFactory.getDAOFactory(DAOFactory.MYSQL);
-				u = fabrica.getUsuarioDAO().buscar(codigo);
+				usu = fabrica.getUsuarioDAO().buscar(codigo);
 
-				request.setAttribute("u", u);
+				request.setAttribute("usu", usu);
 
 				request.setAttribute("p", p);
 
@@ -516,7 +517,7 @@ public class ControladorVistas extends HttpServlet {
 				p.setCodprod(cp);
 				fabrica = DAOFactory.getDAOFactory(DAOFactory.MYSQL);
 				p = fabrica.getProductoDAO().buscar(cp);
-				request.setAttribute("u", u);
+				request.setAttribute("usu", usu);
 				request.setAttribute("p", p);
 				request.setAttribute("lista", lista);
 				request.setAttribute("totalPagar", totalPagar);
@@ -550,7 +551,7 @@ public class ControladorVistas extends HttpServlet {
 			    for (Venta element : lista) {
 			        totalPagar += element.getSubtotal();
 			    }
-			    request.setAttribute("u", u);
+			    request.setAttribute("usu", usu);
 			    request.setAttribute("p", p);
 			    request.setAttribute("lista", lista);
 			    request.setAttribute("totalPagar", totalPagar);
@@ -642,7 +643,7 @@ public class ControladorVistas extends HttpServlet {
 
 
 
-				request.setAttribute("u", u);
+				request.setAttribute("usu", usu);
 				request.setAttribute("p", p);
 				request.setAttribute("lista", lista);
 				request.setAttribute("totalPagar", totalPagar);
