@@ -202,7 +202,7 @@ public class ControladorVistas extends HttpServlet {
 				usu.setIdtipo(tipo);
 
 
-				int ok = gu.registrar(u);
+				int ok = gu.registrar(usu);
 				//salida
 				if (ok == 0) {
 					request.setAttribute("mensaje",
@@ -563,7 +563,7 @@ public class ControladorVistas extends HttpServlet {
 				System.out.println("Entró al proceso finalizar compra");
 
 				//GUardar cabbol
-				v.setCodcli(u.getCodigo());
+				v.setCodcli(usu.getCodigo());
 				v.setNumbol(numbol);
 				v.setFechabol(v.getFechabol());
 			    int ok1=gv.guardarCabBol(v);
