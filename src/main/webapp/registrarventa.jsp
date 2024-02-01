@@ -1,5 +1,8 @@
 <%@page import="models.Venta"%>
 <%@page import="java.util.List"%>
+<%@page import="models.Usuario"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.DAOFactory"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -30,7 +33,31 @@
 </div>
 <div class="form-group d-flex">
 <div class="col-sm-6 d-flex" >
-<input type="text" name="codigocliente" value="${usu.getCodigo()}"class="form-control" placeholder="Código"/>
+	<select id="inputState"
+		class="form-control" name="codigocliente">
+		<option value="0">Seleccione el codigo...</option>
+	<%
+	DAOFactory fabrica = DAOFactory.getDAOFactory(DAOFactory.MYSQL);
+	ArrayList<Usuario> lstUsuarios = fabrica.getUsuarioDAO().listado();
+
+	request.setAttribute("lstUsuarios", lstUsuarios);
+    Usuario usuarioSeleccionado = (Usuario) request.getAttribute("usu");
+    for (Usuario c : lstUsuarios) {
+        %>
+        <option value="<%=c.getCodigo()%>" <%= (usuarioSeleccionado != null && c.getCodigo() == usuarioSeleccionado.getCodigo()) ? "selected" : "" %>>
+            <%= c.getCodigo() %>
+        </option>
+        <%
+    }
+
+	%>
+<c:forEach items="${lstUsuarios}" var="c">
+    <c:if test="${not empty c.getCodigo()}">
+        <option value="${c.getCodigo()}">${c.getCodigo()}</option>
+    </c:if>
+</c:forEach>
+	</select>
+
 <input type="submit" name="accion"value="BuscarCliente" class="btn btn-outline-dark"/>
 </div>
 
